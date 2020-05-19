@@ -1,1 +1,13 @@
 <h1>Total Members: <%= @results.count %></h1>
+
+<ul>
+
+  <% @results.each do |member| %>
+  <ul id=<%= "#{member[:name].delete(' ')}" %>>
+    <h3>Name: <%= member[:name] %></h3>
+    <li>Role: <%= member[:role] %></li>
+    <li>House: <%= member[:house] %></li>
+    <li>Patronus: <%= member[:patronus] %></li>
+  </ul>
+  <% end %>
+</ul>
