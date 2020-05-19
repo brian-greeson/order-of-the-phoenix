@@ -7,13 +7,13 @@ describe 'Can find phoenix members' do
     click_on "Search For Member"
 
     expect(current_path).to eq("/search")
-    expect(page).to have_content("Total members: 21")
+    expect(page).to have_content("Total Members: 21")
 
-    within("section.member") do
-      expect(page).to have_content("name")
-      expect(page).to have_content("role")
-      expect(page).to have_content("house")
-      expect(page).to have_content("patronus")
+    within("ul#AberforthDumbledore") do
+      expect(page).to have_content("Name: Aberforth Dumbledore")
+      expect(page).to have_content("Role: Owner, Hog's Head Inn")
+      expect(page).to have_content("House: Gryffindor")
+      expect(page).to have_content("Patronus: goat")
     end
   end
 end
