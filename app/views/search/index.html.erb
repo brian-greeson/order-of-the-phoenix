@@ -5,9 +5,13 @@
   <% @results.each do |member| %>
   <ul id=<%= "#{member[:name].delete(' ')}" %>>
     <h3>Name: <%= member[:name] %></h3>
-    <li>Role: <%= member[:role] %></li>
+    <% if member[:role] %>
+      <li>Role: <%= member[:role] %></li>
+    <% end %>
     <li>House: <%= member[:house] %></li>
-    <li>Patronus: <%= member[:patronus] %></li>
+    <% if  member[:patronus] %>
+      <li>Patronus: <%= member[:patronus] %></li>
+    <% end %>
   </ul>
   <% end %>
 </ul>
