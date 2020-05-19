@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @results = HarryService.search(params[:house])
+    @results = HarryService.new.house_members(params[:house])
   end
 end
